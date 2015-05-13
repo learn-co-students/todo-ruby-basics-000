@@ -2,8 +2,8 @@ require 'spec_helper'
 
 # v Ignore the code below v  ###########################################################
 #
-def __
-  raise "__ should be replaced with a value or expression to make the test pass."
+def y
+  raise " should be replaced with a value or expression to make the test pass."
 end
 #
 # ^ Ignore the code above ^#############################################################
@@ -19,17 +19,17 @@ describe "ruby" do
 
   # 2.
   it 'has a concept of truth' do 
-    expect(__)
+    expect("")
   end
 
   # 3. 
   it 'knows math' do
-    expect(__).to eq(6*7)
+    expect(6*7).to eq(6*7)
   end
 
   # 4. 
   it 'can remember values with variables' do
-    the_number_one = __
+    the_number_one = 1
 
     expect(the_number_one).to eq(1) 
   end
@@ -41,15 +41,15 @@ describe "ruby" do
 
     original = 2
 
-    expect(reference).to eq(__)
+    expect(reference).to eq(1)
   end
 
   # 6. 
   it 'has methods' do
 
     class Object
-      # define a method named "defined_method"
-      # within this class.
+      def defined_method
+      end
     end
 
     expect(Object).to respond_to(:defined_method)
@@ -58,7 +58,7 @@ describe "ruby" do
   # 7. 
   it 'has methods that can accept arguments' do
     def work(adjective)
-      expect(adjective).to eq(__)
+      expect(adjective).to eq("hard")
     end
 
     work("hard")
@@ -69,6 +69,8 @@ describe "ruby" do
     class Object
       # define a method named "a_method_with" that takes two arguments
       # within this class.
+      def a_method_with(arg1,arg2)
+      end
     end
 
     expect(Object).to respond_to(:a_method_with).with(2).arguments
@@ -77,7 +79,9 @@ describe "ruby" do
   # 9. 
   it 'has methods that return values' do
     # define a method named "always_be" that returns "Nice"
-
+    def always_be
+      return "Nice"
+    end
     expect(always_be).to eq("Nice")
   end
 
@@ -88,7 +92,7 @@ describe "ruby" do
       "expert"
     end
 
-    expect(learning).to eq(__)
+    expect(learning).to eq("expert")
   end
 
   # 11.
@@ -97,7 +101,7 @@ describe "ruby" do
       state
     end
 
-    expect(keep).to eq(__)
+    expect(keep).to eq("calm")
   end
 
 end
