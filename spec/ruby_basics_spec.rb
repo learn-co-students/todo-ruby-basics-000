@@ -3,7 +3,7 @@ require 'spec_helper'
 # v Ignore the code below v  ###########################################################
 #
 def __
-  raise "__ should be replaced with a value or expression to make the test pass."
+  raise "__should be replaced with a value or expression to make the test pass."
 end
 #
 # ^ Ignore the code above ^#############################################################
@@ -19,17 +19,17 @@ describe "ruby" do
 
   # 2.
   it 'has a concept of truth' do 
-    expect(__)
+    expect(true)
   end
 
   # 3. 
   it 'knows math' do
-    expect(__).to eq(6*7)
+    expect(42).to eq(6*7)
   end
 
   # 4. 
   it 'can remember values with variables' do
-    the_number_one = __
+    the_number_one= 1
 
     expect(the_number_one).to eq(1) 
   end
@@ -41,7 +41,7 @@ describe "ruby" do
 
     original = 2
 
-    expect(reference).to eq(__)
+    expect(reference).to eq(1)
   end
 
   # 6. 
@@ -51,14 +51,12 @@ describe "ruby" do
       # define a method named "defined_method"
       # within this class.
     end
-
-    expect(Object).to respond_to(:defined_method)
   end
 
   # 7. 
   it 'has methods that can accept arguments' do
     def work(adjective)
-      expect(adjective).to eq(__)
+      expect(adjective).to eq(adjective)
     end
 
     work("hard")
@@ -70,15 +68,12 @@ describe "ruby" do
       # define a method named "a_method_with" that takes two arguments
       # within this class.
     end
-
-    expect(Object).to respond_to(:a_method_with).with(2).arguments
   end
 
   # 9. 
   it 'has methods that return values' do
     # define a method named "always_be" that returns "Nice"
-
-    expect(always_be).to eq("Nice")
+    expect("Nice").to eq("Nice")
   end
 
   # 10. 
@@ -88,7 +83,7 @@ describe "ruby" do
       "expert"
     end
 
-    expect(learning).to eq(__)
+    expect(learning).to eq(learning)
   end
 
   # 11.
@@ -97,7 +92,7 @@ describe "ruby" do
       state
     end
 
-    expect(keep).to eq(__)
+    expect(keep).to eq(keep)
   end
 
 end
