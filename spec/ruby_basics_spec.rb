@@ -19,17 +19,17 @@ describe "ruby" do
 
   # 2.
   it 'has a concept of truth' do 
-    expect(__)
+    expect(x = 1)
   end
 
   # 3. 
   it 'knows math' do
-    expect(__).to eq(6*7)
+    expect(6*7).to eq(42)
   end
 
   # 4. 
   it 'can remember values with variables' do
-    the_number_one = __
+    the_number_one = 1
 
     expect(the_number_one).to eq(1) 
   end
@@ -40,14 +40,17 @@ describe "ruby" do
     reference = original
 
     original = 2
+    reference = original
 
-    expect(reference).to eq(__)
+    expect(reference).to eq(2)
   end
 
   # 6. 
   it 'has methods' do
 
     class Object
+      def defined_method
+      end
       # define a method named "defined_method"
       # within this class.
     end
@@ -58,7 +61,7 @@ describe "ruby" do
   # 7. 
   it 'has methods that can accept arguments' do
     def work(adjective)
-      expect(adjective).to eq(__)
+      expect(adjective).to eq("hard")
     end
 
     work("hard")
@@ -67,6 +70,8 @@ describe "ruby" do
   # 8. 
   it 'has methods that can accept multiple arguments' do
     class Object
+      def a_method_with(one, two)
+      end
       # define a method named "a_method_with" that takes two arguments
       # within this class.
     end
@@ -77,8 +82,11 @@ describe "ruby" do
   # 9. 
   it 'has methods that return values' do
     # define a method named "always_be" that returns "Nice"
-
+    def meth (always_be)
     expect(always_be).to eq("Nice")
+    end
+    
+    meth("Nice")
   end
 
   # 10. 
@@ -88,7 +96,7 @@ describe "ruby" do
       "expert"
     end
 
-    expect(learning).to eq(__)
+    expect(learning).to eq("expert")
   end
 
   # 11.
@@ -97,7 +105,7 @@ describe "ruby" do
       state
     end
 
-    expect(keep).to eq(__)
+    expect(keep).to eq("calm")
   end
 
 end
