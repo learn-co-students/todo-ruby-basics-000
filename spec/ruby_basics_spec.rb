@@ -19,7 +19,7 @@ describe "ruby" do
 
   # 2.
   it 'has a concept of truth' do 
-    expect(true)
+    expect(1)
   end
 
   # 3. 
