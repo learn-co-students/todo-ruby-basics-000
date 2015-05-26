@@ -64,7 +64,7 @@ describe "ruby" do
   it 'has methods that can accept arguments' do
     # Replace the __ below with code to make the test pass
     def work(adjective)
-      expect(adjective).to eq(hard)
+      expect(adjective).to eq("hard")
     end
 
     work("hard")
@@ -99,7 +99,7 @@ describe "ruby" do
     end
 
     # Replace the __ below with code to make the test pass
-    expect(learning).to eq(expert)
+    expect(learning).to eq("expert")
   end
 
   # 11.
@@ -109,7 +109,7 @@ describe "ruby" do
     end
 
     # Replace the __ below with code to make the test pass
-    expect(keep).to eq(calm)
+    expect(keep).to eq("calm")
   end
 
 
