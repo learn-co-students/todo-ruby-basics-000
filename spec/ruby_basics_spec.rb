@@ -85,7 +85,7 @@ describe "ruby" do
   # 10. 
   it 'return values are always the last evaluated statement' do
     def learning
-      "beginner"
+
       "expert"
     end
 
